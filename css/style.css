@@ -1,0 +1,256 @@
+@font-face {
+    font-family: geon;
+    src: url("../font/Fontspring-DEMO-geon-medium.otf");
+}
+
+body{
+    font-family: geon;
+    background: #e9e9e9;
+    color: rgb(65, 64, 64);
+    transition: 0.5s;
+}
+
+span.escape{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    position: relative;
+    top: 0;left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;height: 100%;
+}
+
+.all{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.head .switch{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+}
+
+.elm{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+.elm.basic{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0px 0px 10px ;
+
+}
+
+.elm.master{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 10px 10px 0px ;
+}
+
+.elm.pro{
+    height: 18rem;
+    color:white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, rgb(144, 143, 194) , rebeccapurple);
+}
+
+ul{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 80%;
+}
+
+li{
+    border-top: 2px solid rgb(145, 145, 145);
+    padding: 0.5rem;
+}
+
+.pro li{
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+input{
+    background: linear-gradient(90deg, rgb(144, 143, 194) , rebeccapurple);
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    color: white;
+    font-weight: 600;
+    width: 90%;
+    font-size: small;
+    cursor: pointer;
+}
+
+.pro input{
+    background: white;
+    color: rebeccapurple;
+}
+
+.toggle{
+    width: 30px;
+    height: 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    background-color: rebeccapurple;
+
+}
+.fa.fa-lock{
+    position: absolute;
+    margin-left: 10px;
+}
+
+.toggle .round{
+    background: white;
+    height: 15px;
+    width: 50%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.round.true{
+    margin-left : 15px;
+    transition: 0.3s;
+}
+
+h2{
+    margin: auto;
+}
+
+#dark{
+    position: absolute;
+    right: 0;
+    top: 0;display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+
+@media screen and (max-width:650px){
+    .body{
+        flex-direction: column-reverse;
+
+    }
+    .elm{
+        margin-top: 1rem;
+        width: 100%;
+        border-radius: 10px;
+
+
+    }
+    .elm.basic{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+    }
+    
+    .elm.master{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+    }
+    
+    .elm.pro{
+        color:white;
+        box-shadow: 0px 00px 15px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(90deg, rgb(144, 143, 194) , rebeccapurple);
+        justify-self: start;
+        
+    }
+
+    .all{
+        margin-bottom: 10vh;
+        margin-top: 1vh;
+    }
+    .head .switch{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .elm.basic.dark{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .elm.master.dark{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .elm.pro.dark{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }   
+}
+
+
+@media screen and (max-width:400px){
+    .all{
+        margin-top: 3rem;
+    }
+}
+
+body.dark{
+    font-family: geon;
+    background: #393644;
+    color: white;
+}
+
+.elm.dark{
+    background: #2e2020;
+}
+
+.elm.basic.dark{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+}
+
+.elm.master.dark{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+}
+
+.elm.pro.dark{
+    height: 18rem;
+    color:white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg, rgb(144, 143, 194) , rebeccapurple);
+}
+
+.dark{
+    transition: 0.5s;
+}
+
+.pro .title{
+    color: rgb(245, 245, 151);
+}
